@@ -131,9 +131,10 @@ export class UserService {
         obj['contact_info']['address'][0]['preferred'] = true;
       if (Array.isArray(obj['contact_info']['email']) && obj['contact_info']['email'].length > 0)
         obj['contact_info']['email'][0]['preferred'] = true;
-      if (Array.isArray(obj['contact_info']['phone']) && obj['contact_info']['phone'].length > 0)
+      if (Array.isArray(obj['contact_info']['phone']) && obj['contact_info']['phone'].length > 0){
         obj['contact_info']['phone'][0]['preferred'] = true;
         obj['contact_info']['phone'][0]['preferred_sms'] = true;
+      }
     }
     /* Account Type */
     obj['account_type'] = { value: selectedProfile.accountType };
